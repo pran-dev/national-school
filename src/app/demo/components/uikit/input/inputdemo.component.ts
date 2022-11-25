@@ -6,7 +6,72 @@ import { CountryService } from 'src/app/demo/service/country.service';
     templateUrl: './inputdemo.component.html'
 })
 export class InputDemoComponent implements OnInit {
-    
+    tableData: any[] = [
+        {
+            "id": 1000,
+            "name": "James Butt",
+            "country": {
+              "name": "Algeria",
+              "code": "dz"
+            },
+            "company": "Benton, John B Jr",
+            "date": "2015-09-13",
+            "status": "unqualified",
+            "activity": 17,
+            "representative": {
+              "name": "Ioni Bowcher",
+              "image": "ionibowcher.png"
+            }
+          },
+          {
+            "id": 1015,
+            "name": "Mattie Poquette",
+            "country": {
+              "name": "Venezuela",
+              "code": "ve"
+            },
+            "company": "Century Communications",
+            "date": "2017-12-12",
+            "status": "negotiation",
+            "activity": 52,
+            "representative": {
+              "name": "Anna Fali",
+              "image": "annafali.png"
+            }
+          },
+          {
+            "id": 1016,
+            "name": "Meaghan Garufi",
+            "country": {
+              "name": "Malaysia",
+              "code": "my"
+            },
+            "company": "Bolton, Wilbur Esq",
+            "date": "2018-07-04",
+            "status": "unqualified",
+            "activity": 31,
+            "representative": {
+              "name": "Ivan Magalhaes",
+              "image": "ivanmagalhaes.png"
+            }
+          },
+          {
+            "id": 1017,
+            "name": "Gladys Rim",
+            "country": {
+              "name": "Netherlands",
+              "code": "nl"
+            },
+            "company": "T M Byxbee Company Pc",
+            "date": "2020-02-27",
+            "status": "renewal",
+            "activity": 48,
+            "representative": {
+              "name": "Stephen Shaw",
+              "image": "stephenshaw.png"
+            }
+          }
+    ]
     countries: any[] = [];
 
     filteredCountries: any[] = [];
