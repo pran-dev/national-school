@@ -1,8 +1,11 @@
-<div class="layout-topbar">
-    <a class="layout-topbar-logo" routerLink="">
-        <img src="assets/layout/images/{{layoutService.config.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo">
-        <span>SAKAI</span>
-    </a>
+<div class="layout-topbar app-header">
+        <a class="layout-topbar-logo" routerLink="">
+            <img src="assets/layout/images/npsLogoheader.png" class="h-auto bg-white" alt="logo" style="border-radius:50%">
+            <div>
+                <span class="block logo-color">National Public School</span>
+                <span class="text-sm block logo-color">Bangalore</span>
+            </div>
+        </a>
 
     <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
         <i class="pi pi-bars"></i>
@@ -12,17 +15,15 @@
         <i class="pi pi-ellipsis-v"></i>
     </button>
 
-    <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+    <div #topbarmenu class="layout-topbar-menu top-header-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+        <p-dropdown [options]="[]" placeholder="Active Academic Year 2022-23" optionLabel="name"
+        [showClear]="true"></p-dropdown>
         <button class="p-link layout-topbar-button">
-            <i class="pi pi-calendar"></i>
-            <span>Calendar</span>
+            <i class="pi pi-bell"></i>
+            <span>Profile</span>
         </button>
         <button class="p-link layout-topbar-button">
             <i class="pi pi-user"></i>
-            <span>Profile</span>
-        </button>
-        <button class="p-link layout-topbar-button" [routerLink]="'/documentation'">
-            <i class="pi pi-cog"></i>
             <span>Settings</span>
         </button>
     </div>

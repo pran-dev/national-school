@@ -1,28 +1,192 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-    height: 100%;
-    font-size: $scale;
+	height: 100%;
+	font-size: $scale;
 }
 
 body {
-    font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--surface-ground);
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--surface-ground);
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-color);
+	text-decoration: none;
+	color: var(--primary-color);
 }
 
 .layout-wrapper {
-    min-height: 100vh;
+	min-height: 100vh;
+}
+
+.login-btn {
+	background: $themeColor;
+	border: 1px solid $themeColor;
+	border-radius: 10px !important;
+	&:focus {
+		box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #fb800369, 0 1px 2px 0 black !important;
+	}
+	&:enabled {
+		&:active {
+			background: $themeColor;
+			color: #fff;
+			border-color: $themeColor;
+		}
+		&:hover {
+			background: $themeColor;
+			color: #fff;
+			border-color: $themeColor;
+		}
+	}
+}
+.social-icon-wrapper {
+	i {
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+}
+.text-orange {
+	color: $themeColor;
+}
+.sign-up-btn {
+	box-shadow: 4px 4px 25px 4px rgba(0, 0, 0, 0.1);
+}
+.p-input-icon-right > i:last-of-type {
+	color: #bababc !important;
+}
+.p-inputtext {
+	background: #f9fbff;
+	padding-left: 2.6rem !important;
+}
+.input-icon {
+	left: 15px;
+	top: 45%;
+	color: #bababc !important;
+}
+.login-input-icon {
+	top: 39%;
+}
+.email-icon {
+	top: 35%;
+}
+.app-header {
+	background: $headerColor !important;
+}
+.logo-color {
+	color: $sidebarColor !important;
+}
+.layout-topbar .layout-topbar-logo {
+	width: auto !important;
+}
+.layout-topbar .layout-topbar-button {
+	color: $sidebarColor !important;
+}
+.layout-sidebar {
+	background: $sidebarColor !important;
+	.layout-menu ul a {
+		color: #fff !important;
+		font-size: 1.25rem !important;
+	}
+}
+.sidebar-override {
+	top: 5rem !important;
+	left: 0rem !important;
+	border-radius: 0 !important;
+	height: calc(100vh - 5rem) !important;
+	padding-right: 0 !important;
+}
+.layout-menu ul a .layout-menuitem-icon {
+	font-size: 1.5rem !important;
+	margin-right: 1.5rem !important;
+}
+.layout-menu ul a:hover {
+	color: $sidebarColor !important;
+}
+.layout-sidebar .layout-menu ul a {
+	font-size: 1.2rem !important;
+	border-radius: 40px 0 0 40px;
+	padding: 16px 24px;
+}
+.grid-header.p-toolbar {
+	padding: 0 !important;
+	border: none !important;
+	background: none;
+	.p-inputtext {
+		padding: 0.75rem !important;
+	}
+}
+.layout-main-container {
+	padding: 7rem 2rem 2rem 2rem !important;
+}
+.layout-footer {
+	background: $sidebarColor;
+}
+.top-header-menu {
+	.p-dropdown {
+		background-color: $headerColor !important;
+		border: none;
+	}
+	.p-dropdown {
+		.p-dropdown-trigger {
+			color: $sidebarColor !important;
+		}
+		.p-dropdown-label.p-placeholder {
+			color: $sidebarColor !important;
+			padding-right: 0 !important;
+		}
+	}
+}
+
+.p-checkbox {
+	.p-checkbox-box {
+		border-radius: 0 !important;
+		&:focus-visible {
+			border-color: $themeColor;
+		}
+	}
+	.p-checkbox-box.p-highlight {
+		border-color: $themeColor;
+		background: $themeColor;
+	}
+	&:not(.p-checkbox-disabled) {
+		.p-checkbox-box.p-highlight {
+			&:hover {
+				border-color: $themeColor;
+				background: $themeColor;
+				color: #fff;
+			}
+		}
+		.p-checkbox-box {
+			&:hover {
+				border-color: $themeColor;
+			}
+		}
+	}
+}
+.role-table {
+	.p-datatable {
+		.p-datatable-tbody {
+			> tr {
+				> td {
+					background: #f9fbff;
+					text-align: center;
+				}
+			}
+		}
+		.p-datatable-thead {
+			> tr {
+				> th {
+					text-align: center;
+				}
+			}
+		}
+	}
 }
